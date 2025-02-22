@@ -11,6 +11,8 @@ import MailIcon from "@mui/icons-material/Mail";
 import List from "@mui/material/List";
 import MuiDrawer from "@mui/material/Drawer";
 import { Avatar, styled, Typography, useTheme } from "@mui/material";
+import { grey } from "@mui/material/colors";
+
 import {
   BarChartOutlined,
   CalendarTodayOutlined,
@@ -24,7 +26,7 @@ import {
   ReceiptOutlined,
   TimelineOutlined,
 } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -114,6 +116,7 @@ const thirdArray = [
 export default function SideBar({ open, handleDrawerClose }) {
   const theme = useTheme();
   const navigate = useNavigate();
+  const location = useLocation();
   return (
     <Drawer variant="permanent" open={open}>
       <DrawerHeader>
@@ -168,6 +171,12 @@ export default function SideBar({ open, handleDrawerClose }) {
                 {
                   minHeight: 48,
                   px: 2.5,
+                  backgroundColor:
+                    location.pathname === item.path
+                      ? theme.palette.mode === "dark"
+                        ? grey[800]
+                        : grey[300]
+                      : null,
                 },
                 open
                   ? {
