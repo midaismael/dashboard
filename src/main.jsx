@@ -28,7 +28,7 @@ ReactDOM.createRoot(root).render(
         <Route path="/barChart" element={<BarChart />} />
         <Route path="/pieChart" element={<PieChart />} />
         <Route path="/lineChart" element={<LineChart />} />
-        <Route path="/geography" element={<Geography />} /> */}
+        <Route path="/geography" element={<Geography />} />
       </Route>
     </Routes>
   </BrowserRouter>
