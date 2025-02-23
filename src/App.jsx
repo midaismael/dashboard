@@ -8,6 +8,7 @@ import SideBar from "./components/SideBar";
 import { ThemeProvider } from "@mui/material/styles";
 import { getDesignTokens } from "./theme";
 import { Outlet } from "react-router-dom";
+import "./index.css";
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
