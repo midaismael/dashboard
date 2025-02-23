@@ -2,7 +2,11 @@ import { DataGrid } from "@mui/x-data-grid";
 import { rows } from "./Data";
 import { useTheme } from "@mui/material";
 import { Box, Typography } from "@mui/material";
-import { AdminPanelSettingsOutlined } from "@mui/icons-material";
+import {
+  AdminPanelSettingsOutlined,
+  LockOpenOutlined,
+  SecurityOutlined,
+} from "@mui/icons-material";
 export default function Team() {
   const theme = useTheme();
   const columns = [
@@ -11,31 +15,42 @@ export default function Team() {
       headerName: "ID",
       width: 33,
       align: "center",
+      flex: 1,
       headerAlign: "center",
     },
     {
       field: "name",
       headerName: "Name",
       align: "center",
+      flex: 1,
       headerAlign: "center",
     },
     {
       field: "email",
       headerName: "Email",
       align: "center",
+      flex: 1,
       headerAlign: "center",
     },
-    { field: "age", headerName: "Age", align: "center", headerAlign: "center" },
+    {
+      field: "age",
+      headerName: "Age",
+      align: "center",
+      flex: 1,
+      headerAlign: "center",
+    },
     {
       field: "phone",
       headerName: "Phone",
       align: "center",
+      flex: 1,
       headerAlign: "center",
     },
     {
       field: "access",
       headerName: "Access",
       align: "center",
+      flex: 1,
       headerAlign: "center",
       renderCell: ({ row: { access } }) => {
         return (
@@ -53,18 +68,30 @@ export default function Team() {
               textAlign: "center",
               display: "flex",
               justifyContent: "space-evenly",
+              marginTop: "10px",
             }}
           >
             {access === "Admin" && (
-              <AdminPanelSettingsOutlined fontSize="small" />
+              <AdminPanelSettingsOutlined
+                sx={{ color: "#fff" }}
+                fontSize="small"
+              />
             )}
             {access === "Manager" && (
-              <AdminPanelSettingsOutlined fontSize="small" />
+              <SecurityOutlined sx={{ color: "#fff" }} fontSize="small" />
             )}
             {access === "User" && (
-              <AdminPanelSettingsOutlined fontSize="small" />
+              <LockOpenOutlined sx={{ color: "#fff" }} fontSize="small" />
             )}
-            <Typography sx={{ fontSize: "13px" }}>{access}</Typography>
+            <Typography
+              sx={{
+                fontSize: "13px",
+                color: "#fff",
+                fontFamily: "circular-web",
+              }}
+            >
+              {access}
+            </Typography>
           </Box>
         );
       },
@@ -72,12 +99,23 @@ export default function Team() {
   ];
 
   return (
-    <div style={{ height: 600, width: "100%" }}>
+    <Box sx={{ height: 600, width: "98%", mx: "auto" }}>
+      <Typography
+        sx={{
+          fontSize: "30px",
+          letterSpacing: "2px",
+          fontWeight: "bold",
+          color: theme.palette.primary.dark,
+          fontFamily: "circular-web",
+        }}
+      >
+        TEAM
+      </Typography>
       <DataGrid
         rows={rows}
         // @ts-ignore
         columns={columns}
       />
-    </div>
+    </Box>
   );
 }

@@ -144,7 +144,10 @@ export default function SideBar({ open, handleDrawerClose }) {
       />
       <Typography
         align="center"
-        sx={{ fontSize: open ? 17 : 0, transition: "0.25s" }}
+        sx={{
+          fontSize: open ? 17 : 0,
+          transition: "0.25s",
+        }}
       >
         Ahmed
       </Typography>
