@@ -15,7 +15,7 @@ export default function Invoices() {
           fontFamily: "circular-web",
         }}
       >
-        CONTACTS
+        Invoices
       </Typography>
       <DataGrid
         checkboxSelection
