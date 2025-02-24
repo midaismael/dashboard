@@ -25,8 +25,8 @@ ReactDOM.createRoot(root).render(
         <Route path="/form" element={<Form />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/barChart" element={<BarChart />} />
-        <Route path="/pieChart" element={<PieChart />} />
+        <Route path="/bar" element={<BarChart />} />
+        <Route path="/pie" element={<PieChart />} />
         <Route path="/lineChart" element={<LineChart />} />
         <Route path="/geography" element={<Geography />} />
       </Route>
