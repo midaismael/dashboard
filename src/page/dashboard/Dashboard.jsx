@@ -7,7 +7,7 @@ import { DownloadOutlined } from "@mui/icons-material";
 export default function Dashboard() {
   return (
     <div>
-      <Box sx={{ textAlign: "right" }}>
+      <Box sx={{ textAlign: "right", mb: 1.3 }}>
         <Button sx={{ padding: "6px 8px" }} variant="contained" color="primary">
           <DownloadOutlined />
           Download Reports

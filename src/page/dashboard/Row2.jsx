@@ -7,14 +7,13 @@ import {
   useTheme,
 } from "@mui/material";
 import Line from "../../page/lineChart/Line";
-import React from "react";
 import { DownloadOutlined } from "@mui/icons-material";
 import { Transactions } from "./Data";
 
 const Row2 = () => {
   const theme = useTheme();
   return (
-    <Stack direction={"row"} flexWrap={"wrap"} gap={1.2} mt={1.3}>
+    <Stack direction={"row"} flexWrap={"wrap"} gap={1.5} mt={2}>
       <Paper sx={{ maxWidth: 900, flexGrow: 1, minWidth: "400px" }}>
         <Stack
           alignItems={"center"}
