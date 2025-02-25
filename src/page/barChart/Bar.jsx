@@ -1,5 +1,5 @@
-import { Box, useTheme } from "@mui/material";
 import { ResponsiveBar } from "@nivo/bar";
+import { Box, useTheme } from "@mui/material";
 
 const data = [
   {
@@ -37,27 +37,19 @@ const data = [
     Germany: 2080,
   },
 ];
-export default function Bar() {
-  const theme = useTheme();
 
+const Bar = ({ isDashboard = false }) => {
+  const theme = useTheme();
   return (
-    <Box sx={{ height: "75vh" }}>
+    <Box sx={{ height: isDashboard ? "300px" : "75vh" }}>
       <ResponsiveBar
         data={data}
         keys={["Spain", "France", "Germany"]}
         indexBy="year"
-        margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
-        padding={0.3}
-        valueScale={{ type: "linear" }}
-        indexScale={{ type: "band", round: true }}
-        colors={{ scheme: "paired" }}
         theme={{
-          text: {
-            fontSize: 11,
-            fill: theme.palette.text.primary,
-            outlineWidth: 0,
-            outlineColor: "transparent",
-          },
+          // @ts-ignore
+          textColor: theme.palette.text.primary,
+          fontSize: 11,
           axis: {
             domain: {
               line: {
@@ -69,8 +61,6 @@ export default function Bar() {
               text: {
                 fontSize: 12,
                 fill: theme.palette.text.primary,
-                outlineWidth: 0,
-                outlineColor: "transparent",
               },
             },
             ticks: {
@@ -80,9 +70,7 @@ export default function Bar() {
               },
               text: {
                 fontSize: 11,
-                fill: theme.palette.text.primary,
-                outlineWidth: 0,
-                outlineColor: "transparent",
+                fill: theme.palette.text.secondary,
               },
             },
           },
@@ -97,23 +85,17 @@ export default function Bar() {
               text: {
                 fontSize: 11,
                 fill: theme.palette.text.primary,
-                outlineWidth: 0,
-                outlineColor: "transparent",
               },
             },
             text: {
               fontSize: 11,
               fill: theme.palette.text.primary,
-              outlineWidth: 0,
-              outlineColor: "transparent",
             },
             ticks: {
               line: {},
               text: {
                 fontSize: 10,
                 fill: theme.palette.text.primary,
-                outlineWidth: 0,
-                outlineColor: "transparent",
               },
             },
           },
@@ -147,7 +129,6 @@ export default function Bar() {
             },
           },
           tooltip: {
-            wrapper: {},
             container: {
               background: theme.palette.background.default,
               color: theme.palette.text.primary,
@@ -160,6 +141,11 @@ export default function Bar() {
             tableCellValue: {},
           },
         }}
+        margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+        padding={0.3}
+        valueScale={{ type: "linear" }}
+        indexScale={{ type: "band", round: true }}
+        colors={{ scheme: "paired" }}
         defs={[
           {
             id: "dots",
@@ -204,19 +190,17 @@ export default function Bar() {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "Year",
+          legend: isDashboard ? null : "Year",
           legendPosition: "middle",
-          legendOffset: 32,
-          truncateTickAt: 0,
+          legendOffset: 35,
         }}
         axisLeft={{
-          tickSize: 0,
+          tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "salary/month ",
+          legend: isDashboard ? null : "salary/month",
           legendPosition: "middle",
-          legendOffset: -40,
-          truncateTickAt: 0,
+          legendOffset: -55,
         }}
         labelSkipWidth={12}
         labelSkipHeight={12}
@@ -250,10 +234,14 @@ export default function Bar() {
         ]}
         role="application"
         ariaLabel="Nivo bar chart demo"
-        barAriaLabel={(e) =>
-          e.id + ": " + e.formattedValue + " in country: " + e.indexValue
-        }
+        barAriaLabel={function (e) {
+          return (
+            e.id + ": " + e.formattedValue + " in country: " + e.indexValue
+          );
+        }}
       />
     </Box>
   );
-}
+};
+
+export default Bar;
