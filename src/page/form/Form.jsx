@@ -4,11 +4,11 @@ import {
   MenuItem,
   Snackbar,
   Stack,
-  Typography,
   useTheme,
 } from "@mui/material";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import Header from "../../components/Header";
 import React from "react";
 import { useForm } from "react-hook-form";
 
@@ -71,17 +71,7 @@ export default function Form() {
       noValidate
       autoComplete="off"
     >
-      <Typography
-        sx={{
-          fontSize: "30px",
-          letterSpacing: "2px",
-          fontWeight: "bold",
-          color: theme.palette.primary.dark,
-          fontFamily: "circular-web",
-        }}
-      >
-        CREATE USER
-      </Typography>
+      <Header title={"CREATE USER"} subTitle={"Create a New User Profile"} />
       <Stack direction={"row"} sx={{ gap: 2 }}>
         <TextField
           error={Boolean(errors.firstName)}
