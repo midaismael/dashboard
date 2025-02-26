@@ -14,17 +14,27 @@ export default function Card({
     <div>
       <Paper
         sx={{
+          transition: "all 0.25s ease-in",
+          borderBottom: "5px solid transparent",
           flexGrow: 1,
           minWidth: "333px",
           p: 1.5,
           display: "flex",
           justifyContent: "space-between",
+          "&:hover": {
+            transform: "translateY(-5px)",
+            borderBottom: "5px solid #2196fe",
+          },
         }}
       >
         <Stack direction={"column"} gap={2}>
           {icons}
-          <Typography>{title}</Typography>
-          <Typography>{subTitle}</Typography>
+          <Typography sx={{ fontFamily: "numbers-font", fontSize: "22px" }}>
+            {title}
+          </Typography>
+          <Typography sx={{ fontFamily: "circular-web" }}>
+            {subTitle}
+          </Typography>
         </Stack>
         <Stack direction={"column"} alignItems={"center"}>
           <Box sx={{ height: "80px", width: "80px" }}>
@@ -173,7 +183,9 @@ export default function Card({
               ]}
             />
           </Box>
-          <Typography>{increase}</Typography>
+          <Typography sx={{ fontFamily: "numbers-font", fontSize: "22px" }}>
+            {increase}
+          </Typography>
         </Stack>
       </Paper>
     </div>

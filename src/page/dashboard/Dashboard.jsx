@@ -1,9 +1,10 @@
-import { Box, Button, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Stack, useTheme } from "@mui/material";
 import Row1 from "./Row1";
 import Row2 from "./Row2";
 import Row3 from "./Row3";
 import { DownloadOutlined } from "@mui/icons-material";
 import Header from "../../components/Header";
+import Btn from "../../components/Btn";
 
 export default function Dashboard() {
   const theme = useTheme();
@@ -20,14 +21,7 @@ export default function Dashboard() {
           isDashboard={true}
         />
         <Box sx={{ textAlign: "right", mb: 1.3 }}>
-          <Button
-            sx={{ padding: "6px 8px" }}
-            variant="contained"
-            color="primary"
-          >
-            <DownloadOutlined />
-            Download Reports
-          </Button>
+          <Btn icon={<DownloadOutlined />} title={"Download Reports"} />
         </Box>
       </Stack>
       <Row1 />

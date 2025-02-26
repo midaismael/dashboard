@@ -23,7 +23,7 @@ ReactDOM.createRoot(root).render(
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/team" element={<Team />} />
         <Route path="/invoices" element={<Invoices />} />
-        <Route path="/f orm" element={<Form />} />
+        <Route path="/form" element={<Form />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/bar" element={<BarChart />} />

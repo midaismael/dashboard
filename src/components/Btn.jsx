@@ -26,7 +26,7 @@ export default function Btn({ icon, title }) {
           backgroundColor: theme.palette.info.main,
           borderRadius: "50%",
           transform: "scale(0) translateY(140%)",
-          transition: "transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1)",
+          transition: "transform 0.9s cubic-bezier(0.215, 0.61, 0.355, 1)",
           zIndex: -1,
         },
         "&:hover::after": {
