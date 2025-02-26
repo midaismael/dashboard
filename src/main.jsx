@@ -12,6 +12,7 @@ import BarChart from "./page/barChart/BarChart";
 import PieChart from "./page/pieChart/PieChart";
 import LineChart from "./page/lineChart/LineChart";
 import Geography from "./page/geography/Geography";
+import NotFound from "./page/notFound/NotFound";
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
@@ -19,16 +20,17 @@ ReactDOM.createRoot(root).render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Dashboard />} />
-        <Route path="/team" element={<Team />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/team" element={<Team />} />
         <Route path="/invoices" element={<Invoices />} />
-        <Route path="/form" element={<Form />} />
+        <Route path="/f orm" element={<Form />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/bar" element={<BarChart />} />
         <Route path="/pie" element={<PieChart />} />
         <Route path="/line" element={<LineChart />} />
         <Route path="/geography" element={<Geography />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   </BrowserRouter>
