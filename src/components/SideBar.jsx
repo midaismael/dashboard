@@ -6,8 +6,6 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import List from "@mui/material/List";
 import MuiDrawer from "@mui/material/Drawer";
 import { Avatar, styled, Tooltip, Typography, useTheme } from "@mui/material";
@@ -89,7 +87,7 @@ const firstArray = [
   { text: "Dashboard", icon: <HomeOutlined />, path: "/" },
   { text: "Manage Team", icon: <PeopleOutline />, path: "/team" },
   {
-    text: "Contacts Information",
+    text: "Contact Information",
     icon: <ContactsOutlined />,
     path: "/contacts",
   },
@@ -137,29 +135,31 @@ export default function SideBar({ open, handleDrawerClose }) {
           height: open ? 90 : 45,
           my: 1,
           transition: "0.25s",
-          border: "2px solid gray",
+          border: `5px solid ${theme.palette.info.light}`,
         }}
         alt="Remy Sharp"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAL16V6Exfl9MoblYTP4J6BsvyE19sCzltxw&s"
+        src="https://cdn-icons-png.flaticon.com/512/219/219983.png"
       />
       <Typography
         align="center"
         sx={{
           fontSize: open ? 17 : 0,
           transition: "0.25s",
+          fontFamily: "anton",
         }}
       >
-        Ahmed
+        User's Name
       </Typography>
       <Typography
         align="center"
         sx={{
+          fontFamily: "anton",
           fontSize: open ? 15 : 0,
           transition: "0.25s",
           color: theme.palette.info.main,
         }}
       >
-        Admin
+        Access
       </Typography>
       <Divider />
 
@@ -210,15 +210,12 @@ export default function SideBar({ open, handleDrawerClose }) {
                 </ListItemIcon>
                 <ListItemText
                   primary={item.text}
-                  sx={[
-                    open
-                      ? {
-                          opacity: 1,
-                        }
-                      : {
-                          opacity: 0,
-                        },
-                  ]}
+                  sx={{
+                    opacity: open ? 1 : 0,
+                    "& .MuiTypography-root": {
+                      fontFamily: "circular-web",
+                    },
+                  }}
                 />
               </ListItemButton>
             </Tooltip>
@@ -274,15 +271,12 @@ export default function SideBar({ open, handleDrawerClose }) {
                 </ListItemIcon>
                 <ListItemText
                   primary={item.text}
-                  sx={[
-                    open
-                      ? {
-                          opacity: 1,
-                        }
-                      : {
-                          opacity: 0,
-                        },
-                  ]}
+                  sx={{
+                    opacity: open ? 1 : 0,
+                    "& .MuiTypography-root": {
+                      fontFamily: "circular-web",
+                    },
+                  }}
                 />
               </ListItemButton>
             </Tooltip>
@@ -338,15 +332,12 @@ export default function SideBar({ open, handleDrawerClose }) {
                 </ListItemIcon>
                 <ListItemText
                   primary={item.text}
-                  sx={[
-                    open
-                      ? {
-                          opacity: 1,
-                        }
-                      : {
-                          opacity: 0,
-                        },
-                  ]}
+                  sx={{
+                    opacity: open ? 1 : 0,
+                    "& .MuiTypography-root": {
+                      fontFamily: "circular-web",
+                    },
+                  }}
                 />
               </ListItemButton>
             </Tooltip>

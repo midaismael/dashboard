@@ -50,6 +50,7 @@ export default function Team() {
     {
       field: "access",
       headerName: "Access",
+      display: "flex",
       align: "center",
       flex: 1,
       headerAlign: "center",
@@ -66,7 +67,7 @@ export default function Team() {
               p: "5px",
               width: "99px",
               borderRadius: "3px",
-              textAlign: "center",
+              alignItems: "center",
               display: "flex",
               justifyContent: "space-evenly",
               marginTop: "10px",
@@ -86,9 +87,8 @@ export default function Team() {
             )}
             <Typography
               sx={{
-                fontSize: "13px",
                 color: "#fff",
-                fontFamily: "circular-web",
+                fontFamily: "zentry",
               }}
             >
               {access}

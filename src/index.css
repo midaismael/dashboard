@@ -1,11 +1,17 @@
 @import url("https://fonts.cdnfonts.com/css/general-sans");
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
 body {
   font-family: "General Sans", sans-serif;
 }
 
 @layer base {
+  @font-face {
+    font-family: "price-font";
+    src: url("/fonts/ChangaOne-Regular.ttf") format("ttf");
+  }
+
   @font-face {
     font-family: "numbers-font";
     src: url("/fonts/Iceland-Regular.ttf") format("ttf");

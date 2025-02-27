@@ -28,11 +28,17 @@ const Row2 = () => {
               mt={2}
               ml={4}
               variant="h6"
-              fontWeight={"bold"}
+              sx={{ fontFamily: "anton" }}
             >
               Revenue Generated
             </Typography>
-            <Typography variant="body2" ml={4}>
+            <Typography
+              sx={{
+                fontFamily: "numbers-font",
+                fontSize: "18px",
+              }}
+              ml={4}
+            >
               $59,342.32
             </Typography>
           </Box>
@@ -59,9 +65,9 @@ const Row2 = () => {
         <Paper>
           <Typography
             color={theme.palette.secondary.main}
-            fontWeight={"bold"}
             p={1.2}
             variant="h6"
+            sx={{ fontFamily: "anton" }}
           >
             Recent Transactions
           </Typography>
@@ -77,21 +83,27 @@ const Row2 = () => {
                 alignItems: "center",
               }}
             >
-              <Box p={1.2}>
-                <Typography variant="body1">{item.txId}</Typography>
-                <Typography variant="body2">{item.user} </Typography>
+              <Box p={1.2} sx={{ minWidth: "100px" }}>
+                <Typography sx={{ fontFamily: "circular-web" }}>
+                  {item.txId}
+                </Typography>
+                <Typography variant="body2" sx={{ fontFamily: "circular-web" }}>
+                  {item.user}
+                </Typography>
               </Box>
-              <Typography variant="body1">{item.date} </Typography>
+              <Typography sx={{ fontFamily: "robert-medium" }}>
+                {item.date}
+              </Typography>
 
               <Typography
-                borderRadius={1.4}
+                borderRadius={0.8}
                 p={1}
                 mr={1}
                 minWidth={"70px"}
                 textAlign={"center"}
                 bgcolor={theme.palette.error.main}
                 color={theme.palette.getContrastText(theme.palette.error.main)}
-                variant="body2"
+                sx={{ fontFamily: "zentry" }}
               >
                 ${item.cost}
               </Typography>

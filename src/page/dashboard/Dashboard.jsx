@@ -8,8 +8,9 @@ import Btn from "../../components/Btn";
 
 export default function Dashboard() {
   const theme = useTheme();
+
   return (
-    <div>
+    <Box>
       <Stack
         direction={"row"}
         justifyContent={"space-between"}
@@ -27,6 +28,6 @@ export default function Dashboard() {
       <Row1 />
       <Row2 />
       <Row3 />
-    </div>
+    </Box>
   );
 }

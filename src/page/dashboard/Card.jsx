@@ -29,10 +29,10 @@ export default function Card({
       >
         <Stack direction={"column"} gap={2}>
           {icons}
-          <Typography sx={{ fontFamily: "numbers-font", fontSize: "22px" }}>
+          <Typography sx={{ fontFamily: "robert-medium", fontSize: "18px" }}>
             {title}
           </Typography>
-          <Typography sx={{ fontFamily: "circular-web" }}>
+          <Typography sx={{ fontFamily: "robert-medium" }}>
             {subTitle}
           </Typography>
         </Stack>
@@ -183,7 +183,7 @@ export default function Card({
               ]}
             />
           </Box>
-          <Typography sx={{ fontFamily: "numbers-font", fontSize: "22px" }}>
+          <Typography sx={{ fontFamily: "robert-medium", fontSize: "18px" }}>
             {increase}
           </Typography>
         </Stack>

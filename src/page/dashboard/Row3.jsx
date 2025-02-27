@@ -10,18 +10,27 @@ const Row3 = () => {
       <Paper sx={{ flexGrow: 1, minWidth: "400px", width: "28%" }}>
         <Typography
           color={theme.palette.secondary.main}
-          sx={{ padding: "30px 30px 0 30px" }}
+          sx={{ padding: "30px 30px 0 30px", fontFamily: "anton" }}
           variant="h6"
-          fontWeight="600"
         >
           Campaign
         </Typography>
 
         <Pie isDashboard={true} />
-        <Typography variant="h6" align="center" sx={{ mt: "15px" }}>
+        <Typography
+          variant="h6"
+          align="center"
+          sx={{ fontFamily: "robert-medium", mt: "15px" }}
+        >
           $48,352 revenue generated
         </Typography>
-        <Typography variant="body2" px={0.7} pb={3} align="center">
+        <Typography
+          sx={{ fontFamily: "robert-medium" }}
+          variant="body2"
+          px={0.7}
+          pb={3}
+          align="center"
+        >
           Includes extra misc expenditures and costs
         </Typography>
       </Paper>
@@ -30,8 +39,7 @@ const Row3 = () => {
         <Typography
           color={theme.palette.secondary.main}
           variant="h6"
-          fontWeight="600"
-          sx={{ padding: "30px 30px 0 30px" }}
+          sx={{ padding: "30px 30px 0 30px", fontFamily: "anton" }}
         >
           Sales Quantity
         </Typography>
