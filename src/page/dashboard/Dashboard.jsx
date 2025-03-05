@@ -22,7 +22,11 @@ export default function Dashboard() {
           isDashboard={true}
         />
         <Box sx={{ textAlign: "right", mb: 1.3 }}>
-          <Btn icon={<DownloadOutlined />} title={"Download Reports"} />
+          <Btn
+            icon={<DownloadOutlined />}
+            title={"Download Reports"}
+            type={null}
+          />
         </Box>
       </Stack>
       <Row1 />

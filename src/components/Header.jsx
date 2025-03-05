@@ -19,7 +19,7 @@ export default function Header({ title, subTitle, isDashboard = false }) {
           color: theme.palette.info.light,
           fontFamily: "anton",
           fontSize: "30px",
-          letterSpacing: "3px",
+          letterSpacing: "2px",
           mb: "10px",
           textTransform: "uppercase",
           animation: `${glow} 1.5s infinite alternate ease-in-out`,

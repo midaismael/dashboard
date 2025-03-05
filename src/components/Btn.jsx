@@ -1,10 +1,11 @@
 import { useTheme } from "@mui/material";
 import { Button } from "@mui/material";
 
-export default function Btn({ icon, title }) {
+export default function Btn({ icon, title, type }) {
   const theme = useTheme();
   return (
     <Button
+      type={type}
       sx={{
         padding: "6px 8px",
         fontFamily: "general",

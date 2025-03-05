@@ -11,6 +11,7 @@ import TextField from "@mui/material/TextField";
 import Header from "../../components/Header";
 import React from "react";
 import { useForm } from "react-hook-form";
+import Btn from "../../components/Btn";
 
 const regEmail =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -142,16 +143,7 @@ export default function Form() {
         ))}
       </TextField>
       <Box sx={{ textAlign: "right " }}>
-        <Button
-          type="submit"
-          sx={{
-            textTransform: "capitalize",
-            fontFamily: "general",
-          }}
-          variant="contained"
-        >
-          Create New User
-        </Button>
+        <Btn title={"Create New User"} icon={null} type={"submit"} />
         <Snackbar
           anchorOrigin={{ vertical: "top", horizontal: "right" }}
           open={open}

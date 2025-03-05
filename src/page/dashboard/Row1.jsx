@@ -10,7 +10,10 @@ export default function Row1() {
       direction={"row"}
       flexWrap={"wrap"}
       gap={1}
-      justifyContent={{ xs: "center", sm: "space-between" }}
+      justifyContent={{
+        xs: "center",
+        sm: "space-between",
+      }}
     >
       <Card
         icons={
