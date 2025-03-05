@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Lottie from "lottie-react";
-import animationData from "../../public/Animation - 1741098768850.json"; // Adjust the path
+import animationData from "../../public/dashboard-animation.json"; // Adjust the path
 import { Box, Typography } from "@mui/material";
 
 const LoadingScreen = ({ onFinish }) => {
@@ -28,7 +28,7 @@ const LoadingScreen = ({ onFinish }) => {
         <Lottie
           animationData={animationData}
           loop
-          style={{ width: 200, height: 200 }}
+          style={{ width: 400, height: 200 }}
         />
         <Typography
           sx={{
