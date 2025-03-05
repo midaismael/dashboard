@@ -10,7 +10,6 @@ import { Outlet } from "react-router-dom";
 import "./index.css";
 import LoadingAnimation from "./components/LoadingAnimation";
 import { useState } from "react";
-import { Typography } from "@mui/material";
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
