@@ -55,7 +55,10 @@ export default function Row1() {
       <Card
         icons={
           <Traffic
-            sx={{ fontSize: "23px", color: theme.palette.text.secondary }}
+            sx={{
+              fontSize: "23px",
+              color: theme.palette.text.secondary,
+            }}
           />
         }
         title={"1,325,134"}

@@ -127,8 +127,8 @@ export default function Form() {
         label="Contact Number"
         variant="filled"
       />
-      <TextField label="Adress 1" variant="filled" />
-      <TextField label="Adress 2" variant="filled" />
+      <TextField label="Address 1" variant="filled" />
+      <TextField label="Address 2" variant="filled" />
       <TextField
         id="outlined-select-currency"
         select

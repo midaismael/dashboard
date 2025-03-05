@@ -17,7 +17,7 @@ export default function Card({
           transition: "all 0.25s ease-in",
           borderBottom: "5px solid transparent",
           flexGrow: 1,
-          minWidth: "333px",
+          minWidth: "300px",
           p: 1.5,
           display: "flex",
           justifyContent: "space-between",

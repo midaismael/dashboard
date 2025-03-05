@@ -13,7 +13,12 @@ import { Transactions } from "./Data";
 const Row2 = () => {
   const theme = useTheme();
   return (
-    <Stack direction={"row"} flexWrap={"wrap"} gap={1.5} mt={2}>
+    <Stack
+      direction={"row"}
+      flexWrap={"wrap"}
+      gap={1.5}
+      mt={2}
+    >
       <Paper sx={{ maxWidth: 900, flexGrow: 1, minWidth: "400px" }}>
         <Stack
           alignItems={"center"}
